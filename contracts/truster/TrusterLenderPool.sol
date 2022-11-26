@@ -38,5 +38,4 @@ contract TrusterLenderPool is ReentrancyGuard {
         uint256 balanceAfter = damnValuableToken.balanceOf(address(this));
         require(balanceAfter >= balanceBefore, "Flash loan hasn't been paid back");
     }
-
 }

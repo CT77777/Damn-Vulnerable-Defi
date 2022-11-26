@@ -6,7 +6,7 @@ interface INaiveReceiverLenderPool {
     function flashLoan(address borrower, uint256 borrowAmount) external;
 }
 
-contract attack {
+contract attackNaive {
 
     constructor (INaiveReceiverLenderPool _lenderPool, address _target) {
         lenderPool = _lenderPool;
