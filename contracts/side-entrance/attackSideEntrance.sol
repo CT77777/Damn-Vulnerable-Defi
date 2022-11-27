@@ -12,7 +12,6 @@ contract attackSideEntrance {
     constructor (ISideEntranceLenderPool _target) {
         target = _target;
         attacker = msg.sender;
-        
     }
 
     ISideEntranceLenderPool private target;
