@@ -106,7 +106,7 @@ describe("[Challenge] The rewarder", function () {
       this.rewardToken.address,
       this.liquidityToken.address
     );
-    this.attack.deployed();
+    await this.attack.deployed();
 
     await ethers.provider.send("evm_increaseTime", [5 * 24 * 60 * 60]);
 

